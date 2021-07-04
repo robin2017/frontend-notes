@@ -19,8 +19,13 @@
     "eslint": "eslint --cache --ext .js,.jsx ./",
     "eslint:fix": "npm run eslint -- --fix",
     "stylelint": "stylelint \"**/*.{css,scss,less}\"",
-    "lint": "npm run eslint && npm run stylelint"
+    "lint": "npm run eslint && npm run stylelint",
+    "push":"git add . && git commit -m \"auto save\" && git push",
+    "predeploy": "npm run build && git checkout .",
+    "deploy": "gh-pages -d build",
+    "pub":"npm run push && npm run deploy"
   },
+  "homepage": "https://robin2017.github.io/frontend-notes",
   "keywords": [
     "ice",
     "react",
