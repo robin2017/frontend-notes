@@ -30,15 +30,12 @@ const App = () => {
     const rst =  funReg.exec(funStr)
     console.log('1：',rst)
   },[])
-
-
   return (
       <div>
         <h3>1、匹配函数字符串</h3>
         <pre>{funStr}</pre>
       </div>
   );
-
 }
 
 ReactDOM.render((
