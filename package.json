@@ -21,7 +21,7 @@
     "stylelint": "stylelint \"**/*.{css,scss,less}\"",
     "lint": "npm run eslint && npm run stylelint",
     "push": "git add . && git commit -m \"auto save\" && git push",
-    "predeploy": "npm run build && git checkout .",
+    "predeploy": "npm run build && git checkout . && node script/copy",
     "deploy": "gh-pages -d build",
     "pub": "npm run push && npm run deploy"
   },
