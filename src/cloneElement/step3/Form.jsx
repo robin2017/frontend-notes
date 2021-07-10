@@ -7,8 +7,6 @@ const { Column } = Table;
 
 
 function Form({ data, run }) {
-  const [cnt] = useState(0);
-
   useEffect(() => {
     setTimeout(() => {
       run && run({ test: true });
