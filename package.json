@@ -32,8 +32,10 @@
     "component"
   ],
   "dependencies": {
+    "ahooks": "^2.10.7",
     "gh-pages": "^3.2.3",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "querystring": "^0.2.1"
   },
   "devDependencies": {
     "@alib/build-scripts": "^0.1.3",
