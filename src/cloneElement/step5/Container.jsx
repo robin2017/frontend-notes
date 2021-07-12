@@ -19,16 +19,14 @@ const service = (params) => {
 function Container({ children }) {
   console.log(`渲染容器-${Date.now()}`);
   const { data, run } = useRequest(service);
-  // 表单Children中添加useMemo，并且将data作为依赖
+  // form为状态组件，放在useMemo中进行隔离
   const formChildren = useMemo(() => {
-    console.log('run usememo:', data);
+    console.log('run usememo:', data, run);
     return addAttrToValidSon2(children, () => ({ run }), (child) => child?.type?.name === 'MyForm');
-  }, [JSON.stringify(data)]);
+  }, []);
 
-  const tableChildren = useMemo(() => {
-    console.log('run usememo:', data);
-    return addAttrToValidSon2(children, () => ({ data }), (child) => child?.type?.name === 'MyTable');
-  }, [JSON.stringify(data)]);
+  // table为ui组件，直接取值
+  const tableChildren = addAttrToValidSon2(children, () => ({ data }), (child) => child?.type?.name === 'MyTable');
   console.log('====>', formChildren, tableChildren);
   return <div className="my-container">{[formChildren, tableChildren]}</div>;
 }

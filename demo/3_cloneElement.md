@@ -83,16 +83,21 @@ function Form({ data, run }) {
 
 
 #### 解决方案
-> 使用useMemo，将data作为依赖
+> 使用useMemo隔离状态组件
 ```
+// 状态组件必须隔离！！！，否则触发cloneElement导致状态清零！！！
 function Container({ children }) {
   console.log(`渲染容器-${Date.now()}`);
   const { data, run } = useRequest(service);
-  // 表单Children中添加useMemo，并且将data作为依赖
+  // form为状态组件，放在useMemo中进行隔离
   const formChildren = useMemo(() => {
-    console.log('run usememo:', data);
-    return addAttrToValidSon(children, () => ({ data, run }), (child) => child?.type?.name === 'Form');
-  }, [JSON.stringify(data)]);
-  return <div className="my-container">{formChildren}</div>;
+    console.log('run usememo:', data, run);
+    return addAttrToValidSon2(children, () => ({ run }), (child) => child?.type?.name === 'MyForm');
+  }, []);
+
+  // table为ui组件，直接取值
+  const tableChildren = addAttrToValidSon2(children, () => ({ data }), (child) => child?.type?.name === 'MyTable');
+  console.log('====>', formChildren, tableChildren);
+  return <div className="my-container">{[formChildren, tableChildren]}</div>;
 }
 ```
