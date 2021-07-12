@@ -25,8 +25,10 @@ function Container({ children }) {
     return addAttrToValidSon2(children, () => ({ run }), (child) => child?.type?.name === 'MyForm');
   }, [JSON.stringify(data)]);
 
-  // table为ui组件，直接取值
-  const tableChildren = addAttrToValidSon2(children, () => ({ data }), (child) => child?.type?.name === 'MyTable');
+  const tableChildren = useMemo(() => {
+    console.log('run usememo:', data);
+    return addAttrToValidSon2(children, () => ({ data }), (child) => child?.type?.name === 'MyTable');
+  }, [JSON.stringify(data)]);
   console.log('====>', formChildren, tableChildren);
   return <div className="my-container">{[formChildren, tableChildren]}</div>;
 }
