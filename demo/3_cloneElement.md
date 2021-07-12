@@ -12,7 +12,7 @@ https://juejin.cn/post/6844903983975235592
 
  
 
-出现问题场景
+#### 出现问题场景
 ```jsx
 import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
@@ -79,4 +79,20 @@ function Form({ data, run }) {
   );
 }
 
+```
+
+
+#### 解决方案
+> 使用useMemo，将data作为依赖
+```
+function Container({ children }) {
+  console.log(`渲染容器-${Date.now()}`);
+  const { data, run } = useRequest(service);
+  // 表单Children中添加useMemo，并且将data作为依赖
+  const formChildren = useMemo(() => {
+    console.log('run usememo:', data);
+    return addAttrToValidSon(children, () => ({ data, run }), (child) => child?.type?.name === 'Form');
+  }, [JSON.stringify(data)]);
+  return <div className="my-container">{formChildren}</div>;
+}
 ```

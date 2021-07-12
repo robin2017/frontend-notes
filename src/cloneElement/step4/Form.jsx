@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import { Table } from '@alifd/next';
-import qs from 'querystring';
+
 
 const { Column } = Table;
 
