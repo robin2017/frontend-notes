@@ -6,13 +6,7 @@ import { Table } from '@alifd/next';
 const { Column } = Table;
 
 
-function Form({ data, run }) {
-  useEffect(() => {
-    setTimeout(() => {
-      run && run({ test: true });
-    }, 3000);
-  }, []);
-
+function MyTable({ data }) {
   return (
     <div>
       <Table dataSource={data?.data || []}>
@@ -24,4 +18,4 @@ function Form({ data, run }) {
   );
 }
 
-export default Form;
+export default MyTable;
