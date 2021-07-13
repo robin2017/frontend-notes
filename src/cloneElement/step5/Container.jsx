@@ -22,12 +22,15 @@ function Container({ children }) {
   // form为状态组件，放在useMemo中进行隔离
   const formChildren = useMemo(() => {
     console.log('run usememo:', data, run);
-    return addAttrToValidSon2(children, () => ({ run }), (child) => child?.type?.name === 'MyForm');
+    return addAttrToValidSon2(children, () => ({ run }), (child) => {
+      console.log('child.type:', child.type);
+      return child?.type?.name === 'MyForm';
+    });
   }, []);
 
   // table为ui组件，直接取值
   const tableChildren = addAttrToValidSon2(children, () => ({ data }), (child) => child?.type?.name === 'MyTable');
-  console.log('====>', formChildren, tableChildren);
+  console.log('表单表格元素====>', formChildren, tableChildren);
   return <div className="my-container">{[formChildren, tableChildren]}</div>;
 }
 

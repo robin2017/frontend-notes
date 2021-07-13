@@ -5,7 +5,9 @@ order: 4
 ##### 使用背景
 > 后端传过来html片段，直接在页面渲染，不用前端处理
  
- 
+##### 其他
++ 代码编辑器：[monaco-editor](https://microsoft.github.io/monaco-editor/)
++ 富文本编辑器：[braft-editor](https://www.yuque.com/braft-editor/be/lzwpnr)
 
 ```jsx
 import React, { Component, useEffect } from 'react';
@@ -29,3 +31,4 @@ ReactDOM.render((
   <App />
 ), mountNode);
 ```
+ 
