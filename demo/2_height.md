@@ -5,6 +5,7 @@ order: 2
 
 ##### 获取视口高度
 > 主要是calc(100% - 100px)时，需要保证父元素为整个视口高度(难保证)
+> 只适用于页面高度小于视口高度
 
 `视口高度：window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight`
 
