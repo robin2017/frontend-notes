@@ -15,8 +15,25 @@ const pick = (obj:{[key:string]:any}, arr:any[] = []) => {
   );
 };
 
+// 将孩子挂在到树上
+const appendChildrenToRoot = (root:any[],children:any[],condition:(child:{[key:string]:any})=>boolean)=>{
+  let hasDone = false
+  root.forEach(child=>{
+    if(hasDone) return
+    if(condition(child)){
+      child.children = children
+      hasDone = true
+    }else{
+      if(Array.isArray(child?.children)&&child.children.length>0){
+        appendChildrenToRoot(child.children,children,condition)
+      }
+    }
+  })
+}
+
 
 export default {
     deepClone,
-    pick
+    pick,
+    appendChildrenToRoot
 }
