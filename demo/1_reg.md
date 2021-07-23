@@ -6,6 +6,7 @@ order: 1
 ##### 相关资料
 
 > https://juejin.cn/post/6844903845227659271
+> http://yuncode.net/code/c_529221e42b46a24
 
 ##### 基础正则表达式
 
@@ -16,6 +17,9 @@ order: 1
 
 ##### 高频正则表达式
 - 手机：xxx
+- 正整数：/^\d+$/
++ 正浮点数：/^\d+\.\d+$/
++ 正整数或正浮点数:/^\d+(\.\d+)?$/
 
 ```jsx
 import React, { Component, useEffect } from 'react';
