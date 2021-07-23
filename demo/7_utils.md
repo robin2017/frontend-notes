@@ -9,6 +9,8 @@ order: 7
  ```jsx
 import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import {Message} from '@alifd/next'
 import { MyUtils } from 'frontend-notes'
 const App = () => {
   useEffect(()=>{
@@ -23,9 +25,13 @@ const App = () => {
     MyUtils.appendChildrenToRoot(root,children,(obj)=>obj.value==='11')
     console.log('appendChildrenToRoot:',root,children)
   },[])
+  const email = '111@qq.com'
   return (
       <div>
         <h3>常见工具</h3>
+         <CopyToClipboard text={email} onCopy={(text) => { Message.success(`复制邮箱${text}到剪切板`) }}>
+          <span style={{ fontSize: '12px', color: '#999999', cursor: 'pointer',  }}>复制邮箱</span>
+        </CopyToClipboard>
       </div>
   );
 }
