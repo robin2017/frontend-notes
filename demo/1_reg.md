@@ -29,15 +29,22 @@ const funStr = `function add(a,b){
 }`
 // 匹配函数名，参数，函数体
 const funReg = /function\s+(\w+)\((.*?)\){([\s\S]*)}/
+const aReg = /<a\shref=(.*?)target=(.*?)>(.*?)<\/a>/g
+const aReplace = '<a style="color:blue;cursor:pointer" onclick="window.location = $1 ">$3</a>'
+const aStr = `1.授权代表人声明书请按照模板填写提交，<a href='http://download.taobaocdn.com/freedom/43448/word/p1bfjb108vo6i1v577eq9p71btf6.doc?spm=0.0.0.0.z0ZPdI&file=p1bfjb108vo6i1v577eq9p71btf6.doc' target='_blank'>点此</a>下载模板，<a href='https://img.alicdn.com/tfs/TB1kbVHbED1gK0jSZFGXXbd3FXa-1136-907.png' target='_blank'>点此</a>查看出具示例；<br/>
+2.授权代表人声明书需要开店主体公司CEO或董事签字，并机打签字人姓名及职位；<br/>`
 const App = () => {
   useEffect(()=>{
     const rst =  funReg.exec(funStr)
     console.log('1：',rst)
+    document.querySelector('.a-rep').innerHTML = aStr.replace(aReg,aReplace)
   },[])
   return (
       <div>
         <h3>1、匹配函数字符串</h3>
         <pre>{funStr}</pre>
+        <h3>2、分组+全局替换</h3>
+        <div className='a-rep'></div>
       </div>
   );
 }
