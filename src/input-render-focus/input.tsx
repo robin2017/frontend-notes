@@ -6,6 +6,7 @@ function MyInput({value,onChange}) {
   console.log('myinput:',value)
   const [localValue,setLocalValue] = useState(value)
   const handleChange = (v)=>{
+    console.log('handlechange:',v)
     setLocalValue(v)
     onChange(v)
   }
