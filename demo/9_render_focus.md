@@ -22,7 +22,6 @@ function Editor({ value, onChange,tik }) {
 export default Editor
 ```
 
-
  ```jsx
 import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
