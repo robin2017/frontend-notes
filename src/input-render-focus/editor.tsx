@@ -13,7 +13,7 @@ export default React.forwardRef(({ value, onChange },ref) =>{
     onChange && onChange(state.toHTML())
   }
   useEffect(() => {
-    // 更好方案：加条件判断
+    // 更好方案：加条件判断（不加判断，可能没法输入中文！！！）
     if(value!==editorState.toHTML()){
       setEditorState(BraftEditor.createEditorState(value))
     }
