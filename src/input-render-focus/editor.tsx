@@ -3,7 +3,7 @@ import BraftEditor from 'braft-editor'
 import 'braft-editor/dist/index.css'
  
 // 支持单向和双向数据绑定
-export default React.forwardRef(({ value, onChange },ref) =>{
+export default React.forwardRef(({ value, onChange, deps },ref) =>{
   console.log('myeditor:',value)
   const [editorState, setEditorState] = useState(BraftEditor.createEditorState(value))
   // 焦点移动都会触发change事件,input则不会
@@ -17,7 +17,8 @@ export default React.forwardRef(({ value, onChange },ref) =>{
     if(value!==editorState.toHTML()){
       setEditorState(BraftEditor.createEditorState(value))
     }
-  },[value])
+    // 单向时，依靠deps来更新数据
+  },[value,deps])
   const getValue = ()=>{
     return editorState.toHTML()
   }

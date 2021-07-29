@@ -14,7 +14,7 @@ function InputRenderFocus() {
       {/* 双向数据绑定 */}
       <Editor value={editorValue} onChange={setEditorValue}/>
       {/* 单向数据绑定 */}
-      <Editor ref={editorRef}/>
+      <Editor ref={editorRef} deps={[]}/>
       <Button onClick={()=>{
         console.log('input value:',value,editorValue,editorRef.current.getValue())
       }}>获取数据</Button>
