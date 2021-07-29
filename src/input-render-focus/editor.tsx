@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useImperativeHandle } from 'react'
 import BraftEditor from 'braft-editor'
 import 'braft-editor/dist/index.css'
  
-
-function Editor({ value, onChange,tik }) {
+// 支持单向和双向数据绑定
+export default React.forwardRef(({ value, onChange },ref) =>{
   console.log('myeditor:',value)
   const [editorState, setEditorState] = useState(BraftEditor.createEditorState(value))
   // 焦点移动都会触发change事件,input则不会
@@ -18,9 +18,13 @@ function Editor({ value, onChange,tik }) {
       setEditorState(BraftEditor.createEditorState(value))
     }
   },[value])
+  const getValue = ()=>{
+    return editorState.toHTML()
+  }
+  useImperativeHandle(ref, () => ({ getValue }))
   return (
     <BraftEditor   value={editorState} onChange={handleChange}  />
   )
-}
+})
 
-export default Editor
+ 
