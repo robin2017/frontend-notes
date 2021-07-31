@@ -1,9 +1,8 @@
-// [1,1,1,2,2,2] => [{start:0,num:3},{start:0,num3}]
-const colSpanUtils = (arr, fn) => {
+export const colSpanHelper = (arr, fn) => {
   // step1:获取true/false数组
   const tfArr = [];
   for (let i = 0; i < arr.length; i++) {
-    tfArr.push(fn(arr[i - 1] || {}, arr[i]));
+    tfArr.push(!!fn(arr[i - 1] || {}, arr[i]));
   }
   tfArr.push(false);
   // step2:获取false下标
@@ -18,5 +17,8 @@ const colSpanUtils = (arr, fn) => {
   return rst;
 };
 
-console.log(colSpanUtils([1, 1, 1, 2, 2, 2], (pre, cur) => pre === cur));
 
+export const colSpanUtils = (arr, dataIndex, fn) => {
+  const list = (arr || []).map((item) => item[dataIndex]);
+  return colSpanHelper(list, fn);
+};

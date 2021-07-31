@@ -3,7 +3,8 @@ title: 10、列合并预处理
 order: 10
 ---
 
-[code](https://github.com/robin2017/frontend-notes/blob/main/src/col-span/utils.ts)
+[ts code](https://github.com/robin2017/frontend-notes/blob/main/src/col-span/utils.ts)
+[js code](https://github.com/robin2017/frontend-notes/blob/main/src/col-span/utils_test.js)
 
  ```jsx
 import React, { Component, useEffect } from 'react';
