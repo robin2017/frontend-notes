@@ -1,9 +1,9 @@
 // [1,1,1,2,2,2] => [{start:0,num:3},{start:0,num3}]
-export const colSpanUtils = (arr:any[],fn:(pre:any,cur:any)=>boolean):{start:number,num:number}[] =>{
+export const colSpanHelper = (arr:any[],fn:(pre:any,cur:any)=>boolean):{start:number,num:number}[] =>{
   // step1:获取true/false数组
   const tfArr:boolean[] = [];
   for (let i = 0; i < arr.length; i++) {
-    tfArr.push(fn(arr[i - 1] || {}, arr[i]));
+    tfArr.push(!!fn(arr[i - 1] || {}, arr[i]));
   }
   tfArr.push(false);
   // step2:获取false下标
@@ -16,5 +16,11 @@ export const colSpanUtils = (arr:any[],fn:(pre:any,cur:any)=>boolean):{start:num
     rst.push({ start: falseInds[i], num: falseInds[i + 1] - falseInds[i] });
   }
   return rst;
+}
+
+
+export const colSpanUtils = (arr:any[],dataIndex:string,fn:(pre:any,cur:any)=>boolean):{start:number,num:number}[]=>{
+  const list = (arr||[]).map(item=>item[dataIndex])
+  return colSpanHelper(list,fn) 
 }
 
