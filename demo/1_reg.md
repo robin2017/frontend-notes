@@ -100,7 +100,7 @@ const App = () => {
         <div>{varExp2}={varParse(varExp2,'record',record)}</div>
         <div>{varExp3}={varParse(varExp3,'record',record)}</div>
         <h3>4、字符串模版解析</h3>
-        <div>{strTemplateParseFun(strTemplate,strTemplateObj.value,strTemplateObj.index,strTemplateObj.record)}</div>
+        <div>{strTemplate} => {strTemplateParseFun(strTemplate,strTemplateObj.value,strTemplateObj.index,strTemplateObj.record)}</div>
       </div>
   );
 }
