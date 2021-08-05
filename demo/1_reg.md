@@ -32,8 +32,8 @@ const funStr = `function add(a,b){
   return a + b;
 }`
 // 匹配函数名，参数，函数体
-const funReg = /function\s+(\w+)\((.*?)\){([\s\S]*)}/
-const aReg = /<a\shref=(.*?)target=(.*?)>(.*?)<\/a>/g
+const funReg = /function\s+(\w+)\((.*?)\){([\s\S]*)}/;
+const aReg = /<a\shref=(.*?)target=(.*?)>(.*?)<\/a>/g;
 // aReplace和aReplaceFunc等价
 const aReplace = '<a style="color:blue;cursor:pointer" onclick="window.location = $1 ">$3</a>'
 const aReplaceFunc = (p0,p1,p2,p3)=>{
@@ -50,15 +50,6 @@ const record = {
     {id:3}
   ]
 }
-const App = () => {
-  useEffect(()=>{
-    const rst =  funReg.exec(funStr)
-    console.log('1：',rst)
-    document.querySelector('.a-rep').innerHTML = aStr.replace(aReg,aReplaceFunc)
-  },[])
-
- 
-
   const varParse = (str,flag,val)=>{
     const thisStr = str.replace(new RegExp(flag),'this')
    const func =  new Function('return '+thisStr)
@@ -69,11 +60,34 @@ const App = () => {
       console.error(e.message)
       return '报错了'
    }
-
   }
+const strTemplate = '${value},${index},${record.name}';
+const strTemplateObj = {
+    value:'hello',
+    index:4,
+    record:{name:'peter'}
+  }
+const strTemplateParseFun  = (str,value,index,record)=>  str.replace(/\$\{value\}/g,value).replace(/\$\{index\}/g,index+"").replace(/\$\{(record.*?)\}/g,(p0,p1)=>{
+    return varParse(p1,'record',record)
+    })
+ 
+const App = () => {
+  useEffect(()=>{
+    const rst =  funReg.exec(funStr)
+    console.log('1：',rst)
+    document.querySelector('.a-rep').innerHTML = aStr.replace(aReg,aReplaceFunc)
+  },[])
+
+ 
+
+
+  
   const varExp1 = 'record?.person.name'
   const varExp2 = 'record?.list[0].id'
   const varExp3 = 'record?.per55son.name'
+  
+
+ 
   return (
       <div>
         <h3>1、匹配函数字符串</h3>
@@ -85,6 +99,8 @@ const App = () => {
         <div>{varExp1}={varParse(varExp1,'record',record)}</div>
         <div>{varExp2}={varParse(varExp2,'record',record)}</div>
         <div>{varExp3}={varParse(varExp3,'record',record)}</div>
+        <h3>4、字符串模版解析</h3>
+        <div>{strTemplateParseFun(strTemplate,strTemplateObj.value,strTemplateObj.index,strTemplateObj.record)}</div>
       </div>
   );
 }
