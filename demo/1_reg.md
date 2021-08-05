@@ -8,6 +8,10 @@ order: 1
 > https://juejin.cn/post/6844903845227659271
 > http://yuncode.net/code/c_529221e42b46a24
 
+
+[String.replace函数使用](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+[String.replace函数使用-第二个参数为函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#%E6%8C%87%E5%AE%9A%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0)
+
 ##### 基础正则表达式
 
 - 数字：\d <==> [0-9]
@@ -30,7 +34,11 @@ const funStr = `function add(a,b){
 // 匹配函数名，参数，函数体
 const funReg = /function\s+(\w+)\((.*?)\){([\s\S]*)}/
 const aReg = /<a\shref=(.*?)target=(.*?)>(.*?)<\/a>/g
+// aReplace和aReplaceFunc等价
 const aReplace = '<a style="color:blue;cursor:pointer" onclick="window.location = $1 ">$3</a>'
+const aReplaceFunc = (p0,p1,p2,p3)=>{
+  return `<a style="color:blue;cursor:pointer" onclick="window.location = ${p1} ">${p3}</a>`
+}
 const aStr = `1.授权代表人声明书请按照模板填写提交，<a href='http://download.taobaocdn.com/freedom/43448/word/p1bfjb108vo6i1v577eq9p71btf6.doc?spm=0.0.0.0.z0ZPdI&file=p1bfjb108vo6i1v577eq9p71btf6.doc' target='_blank'>点此</a>下载模板，<a href='https://img.alicdn.com/tfs/TB1kbVHbED1gK0jSZFGXXbd3FXa-1136-907.png' target='_blank'>点此</a>查看出具示例；<br/>
 2.授权代表人声明书需要开店主体公司CEO或董事签字，并机打签字人姓名及职位；<br/>`
 const record = {
@@ -46,7 +54,7 @@ const App = () => {
   useEffect(()=>{
     const rst =  funReg.exec(funStr)
     console.log('1：',rst)
-    document.querySelector('.a-rep').innerHTML = aStr.replace(aReg,aReplace)
+    document.querySelector('.a-rep').innerHTML = aStr.replace(aReg,aReplaceFunc)
   },[])
 
  
