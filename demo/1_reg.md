@@ -33,18 +33,50 @@ const aReg = /<a\shref=(.*?)target=(.*?)>(.*?)<\/a>/g
 const aReplace = '<a style="color:blue;cursor:pointer" onclick="window.location = $1 ">$3</a>'
 const aStr = `1.授权代表人声明书请按照模板填写提交，<a href='http://download.taobaocdn.com/freedom/43448/word/p1bfjb108vo6i1v577eq9p71btf6.doc?spm=0.0.0.0.z0ZPdI&file=p1bfjb108vo6i1v577eq9p71btf6.doc' target='_blank'>点此</a>下载模板，<a href='https://img.alicdn.com/tfs/TB1kbVHbED1gK0jSZFGXXbd3FXa-1136-907.png' target='_blank'>点此</a>查看出具示例；<br/>
 2.授权代表人声明书需要开店主体公司CEO或董事签字，并机打签字人姓名及职位；<br/>`
+const record = {
+  id:123,
+  person:{
+    name:'robin'
+  },
+  list:[
+    {id:3}
+  ]
+}
 const App = () => {
   useEffect(()=>{
     const rst =  funReg.exec(funStr)
     console.log('1：',rst)
     document.querySelector('.a-rep').innerHTML = aStr.replace(aReg,aReplace)
   },[])
+
+ 
+
+  const varParse = (str,flag,val)=>{
+    const thisStr = str.replace(new RegExp(flag),'this')
+   const func =  new Function('return '+thisStr)
+   const f = func.bind(val)
+   try{
+      return f()
+   }catch(e){
+      console.error(e.message)
+      return '报错了'
+   }
+
+  }
+  const varExp1 = 'record?.person.name'
+  const varExp2 = 'record?.list[0].id'
+  const varExp3 = 'record?.per55son.name'
   return (
       <div>
         <h3>1、匹配函数字符串</h3>
         <pre>{funStr}</pre>
         <h3>2、分组+全局替换</h3>
         <div className='a-rep'></div>
+        <h3>3、变量解析</h3>
+        <pre>record={JSON.stringify(record,null,2)}</pre>
+        <div>{varExp1}={varParse(varExp1,'record',record)}</div>
+        <div>{varExp2}={varParse(varExp2,'record',record)}</div>
+        <div>{varExp3}={varParse(varExp3,'record',record)}</div>
       </div>
   );
 }
