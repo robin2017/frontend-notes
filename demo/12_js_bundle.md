@@ -22,9 +22,10 @@ import { loadAssets } from 'frontend-notes'
  
 const App = ()=>{
   useEffect(()=>{
+    const baseUrl = window.host ==='robin2017.github.io' ? '/frontend-notes' : ''
     // 从cdn上加载资源
-    loadAssets.loadJsFile('/cdn/ice/index.js')
-    loadAssets.loadCssFile('/cdn/ice/index.css')
+    loadAssets.loadJsFile(baseUrl + '/files/ice-app-index.js')
+    loadAssets.loadCssFile(baseUrl + '/files/ice-app-index.css')
   },[])
   return  <div id="ice-container">加载失败</div>
 }
