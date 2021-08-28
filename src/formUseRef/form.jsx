@@ -1,5 +1,6 @@
 import React, { useEffect, useImperativeHandle } from 'react';
 import { Form, Input, Field, Card } from '@alifd/next';
+import BraftEditor from './braft-editor';
 
 const FormItem = Form.Item;
 export default React.forwardRef(({ defaultValue }, ref) => {
@@ -31,6 +32,11 @@ export default React.forwardRef(({ defaultValue }, ref) => {
           label="年龄"
         >
           <Input name="age" />
+        </FormItem>
+        <FormItem
+          label="自我介绍"
+        >
+          <BraftEditor name="desc" />
         </FormItem>
       </Form>
     </div>

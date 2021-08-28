@@ -6,7 +6,7 @@ function FormUseRef() {
   const ref = useRef();
   return (
     <div>
-      <Form defaultValue={{ name: 'robin', age: '29' }} ref={ref} />
+      <Form defaultValue={{ name: 'robin', age: '29', desc: '<p>大家好</p>' }} ref={ref} />
       <Button onClick={() => {
         ref.current.submit().then((rst) => {
           console.log('获取数据：', rst);
