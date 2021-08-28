@@ -8,3 +8,20 @@
 [钩子ahooks](https://ahooks.js.org/zh-CN/)  
 [前端套件appworks](https://appworks.site/)  
 [跨端rax](https://rax.js.org/)
+
+#### 创建React工程
+1、创建普通工程（比较慢）
+```
+ npx create-react-app hello-react
+```
+2、创建普通TS工程（比较慢）
+```
+npx create-react-app hello-tsx --template typescript
+```
+3、创建组件工程
+```
+mkdir hello-components && cd hello-components
+iceworks init component
+```
+4、创建ice工程(appworks上创建)
+![demo](https://robin2017.github.io/frontend-notes/images/ice.jpg)
