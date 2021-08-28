@@ -13,7 +13,7 @@ order: 12
 #### jsBundle需要深入考虑的问题
 1、js版本管理  
 2、js文件需要部署到cdn上  
-3、打包时js代码收敛到js文件中(create-react-app不行,umi可以)  
+3、打包时js代码收敛到js文件中(create-react-app不行,ice可以)  
 
 ```jsx
 import React, { Component, useEffect } from 'react';
