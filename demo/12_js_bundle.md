@@ -22,7 +22,7 @@ import { loadAssets } from 'frontend-notes'
  
 const App = ()=>{
   useEffect(()=>{
-    const baseUrl = window.host ==='robin2017.github.io' ? '/frontend-notes' : ''
+    const baseUrl = location.host ==='robin2017.github.io' ? '/frontend-notes' : ''
     // 从cdn上加载资源
     loadAssets.loadJsFile(baseUrl + '/files/ice-app-index.js')
     loadAssets.loadCssFile(baseUrl + '/files/ice-app-index.css')
