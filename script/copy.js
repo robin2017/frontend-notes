@@ -32,3 +32,4 @@ function copyDirSync(fromFilePath, toFilePath) {
   loop(fromFilePath, toFilePath);
 }
 copyDirSync('images', 'build/images');
+copyDirSync('files', 'build/files');
