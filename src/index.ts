@@ -5,3 +5,4 @@ export { default as InputRenderFocus } from "./input-render-focus";
 import { colSpanUtils } from "./col-span/utils";
 export { colSpanUtils };
 export { default as loadAssets } from "./loadAssets";
+export { default as ObjectAttr} from './object-attr'
