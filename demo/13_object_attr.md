@@ -17,7 +17,7 @@ const rst2 = getObject([
   {attr:'peter.sons.1',value:'july'}
 ])
 ```
-
+[code](https://github.com/robin2017/frontend-notes/blob/main/src/object-attr/index.ts)
 ```jsx
 import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
