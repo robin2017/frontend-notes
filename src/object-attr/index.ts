@@ -27,6 +27,9 @@ const getObject = (attrList:[{attr:string,value:any}]) =>{
   const rst = {};
   attrList.forEach(({ attr, value }) => {
     const as:string[] = attr.split('.');
+    if (Array.isArray(as) && as.length > 1 && as[0] === '') {
+      as.shift();
+    }
     let tmpObj:any = rst;
     as.forEach((a) => {
       if (!tmpObj[a]) {
