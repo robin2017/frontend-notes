@@ -8,6 +8,9 @@ order: 5
 + 文本转对象:editorState = BraftEditor.createEditorState(htmlContent)
 + 对象转文本:htmlContent = editorState.toHTML()
 
+##### 默认样式
+> 直接在渲染侧的外层div上添加即可，或者对p标签进行覆盖
+
 ```jsx
 import React from 'react'
 // 引入编辑器组件
