@@ -4,6 +4,9 @@ order: 14
 ---
 #### 查询网站
 > https://caniuse.com/
++ replaceAll
++ ``
++ ?.
  
 ![replaceAll](https://robin2017.github.io/frontend-notes/images/browser/browser_2.png)
 ![?.](https://robin2017.github.io/frontend-notes/images/browser/browser_1.png)
