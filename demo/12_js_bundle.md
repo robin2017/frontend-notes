@@ -15,6 +15,10 @@ order: 12
 2、js文件需要部署到cdn上  
 3、打包时js代码收敛到js文件中(create-react-app不行,ice可以)  
 
+#### 相关代码
+
+[工具方法](https://github.com/robin2017/frontend-notes/blob/main/src/loadAssets/index.ts)
+
 ```jsx
 import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
