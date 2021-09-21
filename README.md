@@ -7,6 +7,7 @@
 [水印watermark](https://github.com/Yann-Wang/react-watermark-component#readme)  
 [钩子ahooks](https://ahooks.js.org/zh-CN/)  
 [前端套件appworks](https://appworks.site/)  
+[飞冰](https://ice.work/docs/guide/about)
 [跨端rax](https://rax.js.org/)
 
 #### 创建React工程
