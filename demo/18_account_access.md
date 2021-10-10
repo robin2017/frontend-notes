@@ -3,10 +3,10 @@ title: 18、账号权限管理系统
 order: 18
 ---
 ### 1、相关资料
-https://zhuanlan.zhihu.com/p/31219790 [3]
-http://www.woshipm.com/pd/947233.html [4]
-https://zhuanlan.zhihu.com/p/347572760 [5，难]
-https://www.jianshu.com/p/91361944c993
+https://zhuanlan.zhihu.com/p/31219790 [3]  
+http://www.woshipm.com/pd/947233.html [4]  
+https://zhuanlan.zhihu.com/p/347572760 [5，难]  
+https://www.jianshu.com/p/91361944c993  
 
 
 ### 2、账号，角色，权限之间关系
@@ -21,9 +21,9 @@ https://www.jianshu.com/p/91361944c993
 
 
 ### 3、RBAC模型
-http://www.woshipm.com/pd/1150093.html
-https://www.jianshu.com/p/44bfd8d6184b
-https://www.163.com/dy/article/GC4J96HP0511805E.html
+http://www.woshipm.com/pd/1150093.html  
+https://www.jianshu.com/p/44bfd8d6184b  
+https://www.163.com/dy/article/GC4J96HP0511805E.html  
 + Role-Based Access Control:基于角色的访问控制
 + 复杂的账号权限系统都是基于RBAC的，需要引入角色的概念；简单的系统不用
 
@@ -36,12 +36,12 @@ https://www.163.com/dy/article/GC4J96HP0511805E.html
 ![图片](https://robin2017.github.io/frontend-notes/images/rbac1.png)
 
 ### 4、权限系统的四大模式
-https://www.jianshu.com/p/ce0944b4a903
-https://help.aliyun.com/document_detail/174235.html [6]
-http://www.woshipm.com/pd/2174816.html [4]
-https://juejin.cn/post/6844904056876433416 [3]
-https://juejin.cn/post/6941734947551969288 [5]
-https://juejin.cn/post/6951712306598248485 [4]
+https://www.jianshu.com/p/ce0944b4a903  
+https://help.aliyun.com/document_detail/174235.html [6]  
+http://www.woshipm.com/pd/2174816.html [4]  
+https://juejin.cn/post/6844904056876433416 [3]  
+https://juejin.cn/post/6941734947551969288 [5]  
+https://juejin.cn/post/6951712306598248485 [4]  
 #### 4.1、四大模式
 + DAC:Discretionary Access Control,自主访问控制
     + 常见场景：文件系统的权限，如NTFS
@@ -55,7 +55,7 @@ https://juejin.cn/post/6951712306598248485 [4]
 + ABAC:Attribute-Based Access Control,基于属性的访问控制
     + 未来的权限系统模型
     + 缺点：规则复杂难用，而大部分系统没有过多需求
-        + 让用户创建角色容易，但写一个策略json要骂娘
+        + 让用户创建角色容易，但写一个策略json要骂娘   
 #### 4.2、ABAC模型
 > RBAC问题：缺少更多条件限制，而ABAC可以满足更多条件
     + 比如特定的时间才能访问。
