@@ -16,3 +16,8 @@ open -n /Applications/Google\ Chrome.app --args --disable-web-security --user-da
 ### 3、credentials
 a.com => b.com ：cors解决
 a.com的cookie => b.com ：需要credentials
+
+### 4、NET::ERR_CERT_INVALID
+https://stackoverflow.com/questions/58802767/no-proceed-anyway-option-on-neterr-cert-invalid-in-chrome-on-macos
+> 点击屏幕，键盘上输入"thisisunsafe",就可以了，好骚的操作
+
