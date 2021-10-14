@@ -29,3 +29,8 @@ a域名请求b域名，cookie一般带不过去
 其他方案：不确定有没有
 项目方案：将a和b放在同一个父域名，cookie设置为父域名即可
 
+### 6、查看所有cookie
+```
+chrome地址栏中输入:chrome://settings/siteData
+```
+![图片](https://robin2017.github.io/frontend-notes/images/cookie.jpg)
