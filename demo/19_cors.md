@@ -24,3 +24,8 @@ a.com的cookie => b.com ：需要credentials
 https://stackoverflow.com/questions/58802767/no-proceed-anyway-option-on-neterr-cert-invalid-in-chrome-on-macos
 > 点击屏幕，键盘上输入"thisisunsafe",就可以了，好骚的操作
 
+### 5、跨域带cookie
+a域名请求b域名，cookie一般带不过去
+其他方案：不确定有没有
+项目方案：将a和b放在同一个父域名，cookie设置为父域名即可
+
