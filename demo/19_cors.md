@@ -34,3 +34,4 @@ a域名请求b域名，cookie一般带不过去
 chrome地址栏中输入:chrome://settings/siteData
 ```
 ![图片](https://robin2017.github.io/frontend-notes/images/cookie.jpg)
+我的公网mozi账号：手机号/c2ASD
