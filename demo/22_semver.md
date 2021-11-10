@@ -53,9 +53,13 @@ https://jubianchi.github.io/semver-check/#/~0.0.5/0.0.11
 
 
 
-![test](https://robin2017.github.io/frontend-notes/images/semver.jpg)
-### 9、测试
 
+### 9、测试
++ step1: 使用了"semver-version-test": "^1.0.1"
++ step2: 删除了node_modules,没有删除package-lock.json
++ package.json/package-lock.json没有变化，但下载的npm报更新了
+
+![test](https://robin2017.github.io/frontend-notes/images/semver.jpg)
 
  ```jsx
 import React, { Component, useEffect } from 'react';
@@ -64,11 +68,11 @@ import Test from 'semver-version-test'
 const App = () => {
     useEffect(()=>{
    
-        console.log('test:',Test.test())
+        console.log('test:',)
     },[])
   return (
       <div>
-        <h3>语义化版本</h3>
+        <h3>语义化版本:{Test.test()}</h3>
       </div>
   );
 }
