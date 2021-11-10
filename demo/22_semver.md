@@ -51,7 +51,13 @@ https://jubianchi.github.io/semver-check/#/~0.0.5/0.0.11
 + 升级小版本号：npm version minor
 + 升级大版本号：npm version major
 
+vscode 插件：Dependency Analytics 383k使用
++ 内网tnpm包用不了，外网npm包可以用
 
+### 8.5、实际案例
++ @alife/idd-pro-table =》 @alife/imc-operator =》@alife/imc-schema-form =》@alife/imc-staff-select@0.0.11
++ 目前imc-staff-select从0.0.5升级到0.0.11,但是更新idd-pro-table没用，因为0.0.5不是正式版本
++ 将imc-staff-select升级到1.0.0,并且imc-schema-form升级一下，imc-operator不用升级，idd-pro-table也要升级(才能发布umd包)
 
 
 ### 9、测试
