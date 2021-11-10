@@ -51,6 +51,9 @@ https://jubianchi.github.io/semver-check/#/~0.0.5/0.0.11
 + 升级小版本号：npm version minor
 + 升级大版本号：npm version major
 
+
+
+![test](https://robin2017.github.io/frontend-notes/images/semver.jpg)
 ### 9、测试
 
 
