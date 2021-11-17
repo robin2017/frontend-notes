@@ -7,6 +7,8 @@ order: 24
 + Form/FormItem之间可以随意添加标签
 + FormItem和Input之间添加标签，会影响报错信息提示
 
+> 即field.init()所在元素的父元素必须为FormItem
+
  ```jsx
 import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
