@@ -10,11 +10,13 @@ order: 23
   + 宜搭YiDa：https://www.aliwork.com/start.html?spm=a1z332.10384403.0.0.5f8e5d8740XLXv
 
 ### 2、相关文档
-WeDa:https://cloud.tencent.com/document/product/1301/48874
+WeDa:https://cloud.tencent.com/document/product/1301/48874  
 YiDa：https://www.yuque.com/yida/support
 
 ### 3、简单实践:调查问卷
 + 宜搭
+> 提交人需要登录钉钉，没法匿名提交  
+
 https://www.aliwork.com/alibaba/web/APP_MVP9XLQXACD44NG48246/admin/pageAppEdit.html#/form/receipt/FORM-NC966W81KDDVB9DFX21NB1DAHBJK26L1FN0WK1/page?navUuid=FORM-NC966W81KDDVB9DFX21NB1DAHBJK26L1FN0WK1&_k=0rx503
 
 ![test](https://robin2017.github.io/frontend-notes/images/yida2.jpg)
