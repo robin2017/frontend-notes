@@ -6,3 +6,5 @@ import { colSpanUtils } from "./col-span/utils";
 export { colSpanUtils };
 export { default as loadAssets } from "./loadAssets";
 export { default as ObjectAttr} from './object-attr'
+export { default as FunctionSerial} from './function-serial'
+ 
