@@ -17,27 +17,33 @@ const myObj = {
   value: 'function(a){console.log(this);return a }',
 };
 
-const parseFunc = (funcObj, funcReg) => {
+
+const getFunc = (funcObj, funcReg) => {
   if (isFuncObj(funcObj)) {
     const regRet = funcReg.exec(funcObj.value);
     if (regRet) {
       const funBodyStr = regRet[1];
       let funTmp = new Function('a', funBodyStr);
       funTmp = funTmp.bind({ name: 'robin' });
-      const rst = null;
-      try {
-        return funTmp('abc');
-      } catch (e) {
-        console.error('函数执行异常:', e);
-      }
+      return (...params) => {
+        try {
+          return funTmp(...params);
+        } catch (e) {
+          console.error('函数运行错误:', e);
+        }
+      };
+    } else {
+      console.error('函数字符串不符合正则表达式:', funcObj.value, funcReg);
     }
+  } else {
+    console.error('不符合函数规范');
   }
 };
 
 function FunctionSerial() {
   useEffect(() => {
-    const rst = parseFunc(myObj, myReg);
-    debugger;
+    const myFunc = getFunc(myObj, myReg);
+    const rst = myFunc('123');
     console.log(rst);
   }, []);
   return (

@@ -15,6 +15,9 @@ order: 27
 ```
 #### 3、反序列化
 ```
+const isFuncObj = (obj) => {
+  return obj.type === 'JSFunction' && typeof obj.value === 'string';
+};
 // 这三个相互关联
 const myReg = /function\(a\)\s*{([\s\S]*)}/;
 
