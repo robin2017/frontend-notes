@@ -40,11 +40,27 @@ const getFunc = (funcObj, funcReg) => {
   }
 };
 
+// 参考：https://qastack.cn/programming/29182244/convert-a-string-to-a-template-string
+const getExpressValue = (express, params) => {
+  const names = Object.keys(params);
+  const vals = Object.values(params);
+  const funTmp = new Function(...names, `return \`${express}\`;`);
+  try {
+    return funTmp(...vals);
+  } catch (e) {
+    console.error('函数运行报错:', e);
+  }
+};
+
+
 function FunctionSerial() {
   useEffect(() => {
     const myFunc = getFunc(myObj, myReg);
     const rst = myFunc('123');
     console.log(rst);
+    const value = '123';
+    const r = getExpressValue('hello,${record.name}', { value, record: { name: 'bota' } });
+    console.log(r);
   }, []);
   return (
     <div>

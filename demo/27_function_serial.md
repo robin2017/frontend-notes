@@ -1,19 +1,19 @@
 ---
-title: 27、函数序列话
+title: 27、函数/表达式序列话
 order: 27
 ---
 
 #### 1、背景
 + 需要将函数通过JSON的格式进行传递
 
-#### 2、序列化规范
+#### 2、函数序列化规范
 ```
 {
     type:'JSFunction',
     value: string
 }
 ```
-#### 3、反序列化
+#### 3、函数反序列化
 ```
 const isFuncObj = (obj) => {
   return obj.type === 'JSFunction' && typeof obj.value === 'string';
@@ -50,6 +50,23 @@ const getFunc = (funcObj, funcReg) => {
 };
 
 ```
+
+#### 4、表达式序列化
+```
+// 参考：https://qastack.cn/programming/29182244/convert-a-string-to-a-template-string
+const getExpressValue = (express, params) => {
+  const names = Object.keys(params);
+  const vals = Object.values(params);
+  const funTmp = new Function(...names, `return \`${express}\`;`);
+  try {
+    return funTmp(...vals);
+  } catch (e) {
+    console.error('函数运行报错:', e);
+  }
+};
+
+```
+
 
 
  ```jsx
