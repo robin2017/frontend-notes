@@ -12,7 +12,7 @@
   "module": "es/index.js",
   "stylePath": "style.js",
   "scripts": {
-    "start": "build-scripts start",
+    "start": "build-scripts start --port 6060",
     "build": "build-scripts build",
     "test": "build-scripts test",
     "prepublishOnly": "npm run build",
@@ -33,6 +33,7 @@
   ],
   "dependencies": {
     "ahooks": "^2.10.7",
+    "antd": "^3.26.5",
     "gh-pages": "^3.2.3",
     "prop-types": "^15.5.8",
     "querystring": "^0.2.1",

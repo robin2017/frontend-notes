@@ -7,4 +7,5 @@ export { colSpanUtils };
 export { default as loadAssets } from "./loadAssets";
 export { default as ObjectAttr} from './object-attr'
 export { default as FunctionSerial} from './function-serial'
+export { default as AntdForm} from './antd-form'
  
