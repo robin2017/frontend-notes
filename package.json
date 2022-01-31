@@ -12,7 +12,7 @@
   "module": "es/index.js",
   "stylePath": "style.js",
   "scripts": {
-    "start": "build-scripts start --port 6060",
+    "start": "build-scripts start --port 4444",
     "build": "build-scripts build",
     "test": "build-scripts test",
     "prepublishOnly": "npm run build",
