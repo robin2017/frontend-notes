@@ -31,10 +31,7 @@ const App = () => {
       imgURL: data.downloadUrl,
       fileURL: data.downloadUrl,
     };
-    // 上传耗时
-    setTimeout(() => {
-      setFiles((list) => [...list, obj]);
-    }, 1000);
+    setFiles((list) => [...list, obj]);
   };
   console.log("files:", files);
   return (
@@ -47,7 +44,7 @@ const App = () => {
         withCredentials={false}
       >
         <Button>文件上传</Button>
-      </Upload>
+ 
     </div>
   );
 };
