@@ -44,7 +44,7 @@ const App = () => {
         withCredentials={false}
       >
         <Button>文件上传</Button>
- 
+      </Upload>
     </div>
   );
 };
