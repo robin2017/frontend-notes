@@ -7,3 +7,8 @@ order: 5000
 
 ![pic](https://robin2017.github.io/frontend-notes/images/stack.jpg)
 ![pic](https://robin2017.github.io/frontend-notes/images/stack2.jpg)
+
+## 2、资源代理
+> 内网有山海关插件，外网暂未找到  
+
+![pic](https://robin2017.github.io/frontend-notes/images/replace.jpg)
