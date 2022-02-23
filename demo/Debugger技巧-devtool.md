@@ -19,3 +19,12 @@ const formRef = fiber.return.return.return.return.return.return.child.sibling.ch
 
 ## 2、查看dom的具体属性:console.dir
 ![test](https://robin2017.github.io/frontend-notes/images/dir.jpg)
+
+## 3、莫名其妙的message/console.log
+
+![test](https://robin2017.github.io/frontend-notes/images/error.jpg)
+
++ unicode转化
+提交数据失败：\u63d0\u4ea4\u6570\u636e\u5931\u8d25
+
+![test](https://robin2017.github.io/frontend-notes/images/js.jpg)
