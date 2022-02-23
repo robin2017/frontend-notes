@@ -17,5 +17,5 @@ function getFiberByDom(dom){
 const formRef = fiber.return.return.return.return.return.return.child.sibling.child.stateNode.props.formRef
 ```
 
-## 2、查看dom的具体属性
+## 2、查看dom的具体属性:console.dir
 ![test](https://robin2017.github.io/frontend-notes/images/dir.jpg)
