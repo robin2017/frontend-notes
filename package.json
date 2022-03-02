@@ -36,6 +36,7 @@
     "antd": "^3.26.5",
     "gh-pages": "^3.2.3",
     "koa": "^2.13.4",
+    "paloma": "^1.2.5",
     "prop-types": "^15.5.8",
     "querystring": "^0.2.1",
     "semver-version-test": "^1.0.1"

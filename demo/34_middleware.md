@@ -10,7 +10,7 @@ order: 34
 + redux的pipe模型
 + useTable参考以上
  
-## 2、参考资料
+## 2、参考资料 
 [前端常见中间件机制对比分析](https://juejin.cn/post/6882751879118323719)  
 [【高频面试题】compose和pipe的实现](https://juejin.cn/post/7008089093775048735)  
 [JavaScript中的compose函数和pipe函数](https://juejin.cn/post/6844904061821517832)  
