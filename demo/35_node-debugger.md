@@ -8,5 +8,5 @@ order: 35
 
 ## 2、demo
 在简单项目中行，在复杂项目中不行，好烦躁！！！
-![图片](https://robin2017.github.io/frontend-notes/images/debugger-success.png)
-![图片](https://robin2017.github.io/frontend-notes/images/debugger-error.png)
+![图片](https://robin2017.github.io/frontend-notes/images/debugger-success.jpg)
+![图片](https://robin2017.github.io/frontend-notes/images/debugger-error.jpg)
