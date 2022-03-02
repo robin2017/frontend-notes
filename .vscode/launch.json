@@ -12,7 +12,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/node-debugger/app.js"
+            "program": "${workspaceFolder}/src/app.js",
+            "debuggStdLib":true
         }
     ]
 }
