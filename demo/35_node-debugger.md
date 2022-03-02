@@ -9,7 +9,7 @@ order: 35
 ## 2、demo
 在简单项目中行，在复杂项目中不行，好烦躁！！！
 + 在个人电脑上可以，工作电脑上不行
-+ 原因：vscode 1.64.0 有问题，需要回退到1.63.0
++ 原因：vscode 1.64.0 有问题，需要回退到1.63.0，真是fuck
 + 可用地址：https://code.visualstudio.com/updates/v1_63
 
 ![图片](https://robin2017.github.io/frontend-notes/images/debugger-success.jpg)
