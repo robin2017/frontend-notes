@@ -1,30 +1,22 @@
-const fun1 = (x) => x + 1;
-const fun2 = (x) => x ** 2;
-// 我的ES6实现
-const pipe = (...fns) => (val) => fns.reduce((resp, fn) => fn(resp), val);
-// 我的ES6实现
-const compose = (...fns) => (val) => fns.reduceRight((resp, fn) => fn(resp), val);
-// 1、嵌套执行的函数:里面先执行，外面后执行
-const res = fun2(fun1(1));
-// 2、平铺执行：先左后右
-const res1 = pipe(fun1, fun2)(1);
-// 3、平铺执行：先右后左
-const res2 = compose(fun2, fun1)(1);
-console.log(res, res1, res2); // 4 4 4
+const Koa = require('koa');
 
-// 资料上ES5实现
-// const pipe = function () {
-//   const args = [].slice.apply(arguments);
-//   return function (x) {
-//     const middleFn = (res, cb) => cb(res);
-//     return args.reduce(middleFn, x);
-//   };
-// };
+const app = new Koa();
+// 中间件1
+app.use((ctx, next) => {
+  console.log(1);
+  next();
+  console.log(2);
+});
 
-// 资料上ES5实现
-// const compose = function () {
-//   const args = [].slice.apply(arguments);
-//   return function (x) {
-//     return args.reduceRight((res, cb) => cb(res), x);
-//   };
-// };
+// 中间件 2
+app.use((ctx, next) => {
+  console.log(3);
+  next();
+  console.log(4);
+});
+
+app.listen(8000, () => {
+  console.log('Server is starting');
+});
+// 控制台打印：1-3-4-2
+

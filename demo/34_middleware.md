@@ -30,7 +30,18 @@ order: 34
 
  ## 4、js基础知识：compose函数/pipe函数
 > 两个函数作用都是：将需要嵌套执行的函数平铺
-### 4.0、代码实现demo
+
+### 4.1、pipe函数(类似队列)
++ 执行顺序：从左到右
++ 底层实现：reduce
+### 4.2、compose函数(类似栈)
++ 执行顺序：从右到左
++ 底层实现：reduceRight
++ 应用：redux的中间件，webpack的loader，koa的洋葱模型
++ 为啥从右到左：
+
+### 4.3、代码实现demo（局限性：函数只有一个参数，接受其他函数的返回）
+
 ```
 const fun1 = (x) => x + 1;
 const fun2 = (x) => x ** 2;
@@ -46,10 +57,79 @@ const res1 = pipe(fun1, fun2)(1);
 const res2 = compose(fun2, fun1)(1);
 console.log(res, res1, res2); // 4 4 4
 ```
-### 4.1、pipe函数
-+ 执行顺序：从左到右
-+ 底层实现：reduce
-### 4.2、compose函数
-+ 执行书序：从右到左
-+ 底层实现：reduceRight
-+ 应用：redux的中间件，webpack的loader
+### 4.4、koa的compose函数
++ 与普通compose函数对比
+    + 函数有两个参数
+    + 支持async语法
+
+```
+const middleware = [];
+function use(mw) {
+  middleware.push(mw);
+}
+
+// 精妙绝伦的写法，目前自己写不出来
+function compose(middleware) {
+  return (ctx, next) => {
+    function dispatch(i) {
+      const fn = middleware[i];
+      if (!fn) return;
+      return fn(ctx, dispatch.bind(null, i + 1));
+    }
+    return dispatch(0);
+  };
+}
+// ------------------上面定义，下面调用------------------
+
+const mw1 = async function (ctx, next) {
+  console.log('next前，第一个中间件');
+  await next();
+  console.log('next后，第一个中间件');
+};
+const mw2 = async function (ctx, next) {
+  console.log('next前，第二个中间件');
+  await next();
+  console.log('next后，第二个中间件');
+};
+const mw3 = async function (ctx, next) {
+  console.log('第三个中间件，没有next了');
+};
+use(mw1);
+use(mw2);
+use(mw3);
+const fn = compose(middleware);
+fn();
+// next前，第一个中间件
+// next前，第二个中间件
+// 第三个中间件，没有next了
+// next后，第二个中间件
+// next后，第一个中间件
+
+```
+## 5、koa源码分析
+> koa中间件=>洋葱模型=>compose函数
+### 5.1、简单demo
+```
+const Koa = require('koa');
+
+const app = new Koa();
+// 中间件1
+app.use((ctx, next) => {
+  console.log(1);
+  next();
+  console.log(2);
+});
+
+// 中间件 2
+app.use((ctx, next) => {
+  console.log(3);
+  next();
+  console.log(4);
+});
+
+app.listen(8000, () => {
+  console.log('Server is starting');
+});
+// 控制台打印：1-3-4-2
+```
+### node调试
