@@ -23,7 +23,8 @@
     "push": "git add . && git commit -m \"auto save\" && git push",
     "predeploy": "npm run build && git checkout . && node script/copy",
     "deploy": "gh-pages -d build",
-    "pub": "npm run push && npm run deploy"
+    "pub": "npm run push && npm run deploy",
+    "jest-test": "jest"
   },
   "homepage": "https://robin2017.github.io/frontend-notes",
   "keywords": [
@@ -54,6 +55,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.8.0",
+    "jest": "^27.5.1",
     "react": "^16.3.0",
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^16.3.0",

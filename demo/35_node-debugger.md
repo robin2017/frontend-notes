@@ -1,5 +1,5 @@
 ---
-title: 35、node-debugger（vscode）
+title: 35、node调试（vscode）
 order: 35
 ---
 ## 1、参考资料

@@ -30,7 +30,7 @@ console.log('rst:', rst); // 6
 [【高频面试题】compose和pipe的实现](https://juejin.cn/post/7008089093775048735)  
 [JavaScript中的compose函数和pipe函数](https://juejin.cn/post/6844904061821517832)  
 [【Node】深入浅出 Koa 的洋葱模型](https://juejin.cn/post/7012031464237694983)  
-[如何更好地理解中间件和洋葱模型](https://juejin.cn/post/6890259747866411022)  
+[6分，如何更好地理解中间件和洋葱模型](https://juejin.cn/post/6890259747866411022)  
 [深入理解洋葱模型中间件机制](https://juejin.cn/post/6844904025767280648)  
 [Koa 洋葱模型（源码解析，简约版）](https://juejin.cn/post/6844904121858785294)    
 [Koa的洋葱中间件，Redux的中间件，Axios的拦截器让你迷惑吗？实现一个精简版的就彻底搞懂了](https://juejin.cn/post/6844904039608500237)  
