@@ -15,7 +15,7 @@ app.use((ctx, next) => {
   console.log(4);
 });
 
-app.listen(8000, () => {
+app.listen(3000, () => {
   console.log('Server is starting');
 });
 // 控制台打印：1-3-4-2

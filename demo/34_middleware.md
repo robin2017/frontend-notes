@@ -4,6 +4,21 @@ order: 34
 ---
 > 问题由来：use-table的getParams原理排查
 
+## 0、基础知识/概念
+### 0.1、高阶函数：一个接收函数作为参数或将函数作为输出返回的函数。
++ 返回函数的函数，可以称为二阶函数
+### 0.2、bind
+[官方文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)  
++ bind作用：将有参数函数转化为无参函数，且给this赋值。所以`洋葱模型中next()调用时，不用传参`
+```
+const addWithArgs = (a, b) => {
+  return a + b;
+};
+const addWithoutArgs = addWithArgs.bind(null, 2, 4);
+const rst = addWithoutArgs();
+console.log('rst:', rst); // 6
+```
+
 [相关代码](https://github.com/ahooksjs/useTable/blob/v0.2.14/packages/use-query-display/src/index.ts#L70)
 ## 1、常见使用的地方
 + koa的洋葱模型
