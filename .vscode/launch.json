@@ -12,7 +12,17 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/app.js",
+            "program": "${workspaceFolder}/src/node-debugger/app.js",
+            "debuggStdLib":true
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "koa调试demo",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/koa-middleware/index.js",
             "debuggStdLib":true
         }
     ]

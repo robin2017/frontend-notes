@@ -133,3 +133,6 @@ app.listen(8000, () => {
 // 控制台打印：1-3-4-2
 ```
 ### node调试
+> 现在简单了解，后续可以在此项目中调试
+![图片](https://robin2017.github.io/frontend-notes/images/koa1.jpg)
+![图片](https://robin2017.github.io/frontend-notes/images/koa2.jpg)
