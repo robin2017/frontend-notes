@@ -24,7 +24,7 @@
     "predeploy": "npm run build && git checkout . && node script/copy",
     "deploy": "gh-pages -d build",
     "pub": "npm run push && npm run deploy",
-    "jest-test": "jest"
+    "jest-test": "jest src"
   },
   "homepage": "https://robin2017.github.io/frontend-notes",
   "keywords": [
