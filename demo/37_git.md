@@ -19,9 +19,17 @@ ssh-keygen -t rsa -C "1143017179@qq.com"
 ![pic](https://robin2017.github.io/frontend-notes/images/ssh.png)
 
 #### 3、配置文件管理key
+没有配置则gitpage部署时报403错误  
+
 ![pic](https://robin2017.github.io/frontend-notes/images/sshconfig.png)
+
+#### 4、验证是否识别
+![pic](https://robin2017.github.io/frontend-notes/images/sshsuccess.png)
 
 ## 常见问题
 #### 1、403
 配置config即可
 ![pic](https://robin2017.github.io/frontend-notes/images/ssherror.png)
+
+#### 2、仓库push混乱
+![pic](https://robin2017.github.io/frontend-notes/images/err.png)
