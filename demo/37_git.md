@@ -51,6 +51,7 @@ git config --local user.email "1143027179@qq.com"
 + 仅github的wangy202012账号需要修改git路径，其他都不用
 
 
+
 域名 | 用户名  | 邮箱|rsa文件
 -|-|-|-
 github.com | robin2017 |  robin.seu@foxmail.com|id_rsa_github.com.pub	|
