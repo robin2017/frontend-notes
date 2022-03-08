@@ -3,6 +3,7 @@ title: 37、github多账号
 order: 37
 ---
 > 两个账号：qq邮箱和fox邮箱，密码都是c2ASD
+robin2017/wangy
 ## 参考资料
 [如何在本地管理和切换多个 github 账号？](https://juejin.cn/post/6844903831000596488)   
 
@@ -12,7 +13,15 @@ order: 37
 ```
 ssh-keygen -t rsa -C "1143017179@qq.com"
 ```
-![pic](/images/rsa.png)
+![pic](https://robin2017.github.io/frontend-notes/images/rsa.png)
 
 #### 2、绑定到新的github账号
-![pic](/images/ssh.png)
+![pic](https://robin2017.github.io/frontend-notes/images/ssh.png)
+
+#### 3、配置文件管理key
+![pic](https://robin2017.github.io/frontend-notes/images/sshconfig.png)
+
+## 常见问题
+#### 1、403
+配置config即可
+![pic](https://robin2017.github.io/frontend-notes/images/ssherror.png)
