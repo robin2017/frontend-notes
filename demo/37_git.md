@@ -47,6 +47,8 @@ git config --local user.email "1143027179@qq.com"
 ![pic](https://robin2017.github.io/frontend-notes/images/config.png)
 
 ## 最佳实践
++ 使用git协议，不要用https
++ 仅github的wangy202012账号需要修改git路径，其他都不用
 
 
 域名 | 用户名  | 邮箱|rsa文件
