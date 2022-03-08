@@ -26,6 +26,19 @@ ssh-keygen -t rsa -C "1143017179@qq.com"
 #### 4、验证是否识别
 ![pic](https://robin2017.github.io/frontend-notes/images/sshsuccess.png)
 
+#### 5、git clone / git push
++ 域名替换
++ 作者没有更换
+```
+git clone git@github.com:wangy202012/react-components.git
+// github.com替换为qq
+git clone git@qq:wangy202012/react-components.git
+
+```
+![pic](https://robin2017.github.io/frontend-notes/images/gitclone.png)
+![pic](https://robin2017.github.io/frontend-notes/images/gitpush.png)
+![pic](https://robin2017.github.io/frontend-notes/images/author.png)
+
 ## 常见问题
 #### 1、403
 配置config即可
