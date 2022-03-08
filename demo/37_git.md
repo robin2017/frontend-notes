@@ -39,6 +39,13 @@ git clone git@qq:wangy202012/react-components.git
 ![pic](https://robin2017.github.io/frontend-notes/images/gitpush.png)
 ![pic](https://robin2017.github.io/frontend-notes/images/author.png)
 
+#### 6、修改工程配置
+```
+git config --local user.name "wangy202012"      
+git config --local user.email "1143027179@qq.com"
+```
+![pic](https://robin2017.github.io/frontend-notes/images/config.png)
+
 ## 常见问题
 #### 1、403
 配置config即可
