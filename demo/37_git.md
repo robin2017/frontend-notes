@@ -54,9 +54,9 @@ git config --local user.email "1143027179@qq.com"
 
 域名 | 用户名  | 邮箱|rsa文件
 -|-|-|-
-github.com | robin2017 |  robin.seu@foxmail.com|id_rsa_github.com.pub	|
-github.qq.com | wangy202012 |  1143027179@qq.com|id_rsa_github.qq.com.pub|
-gitlab.alibaba-inc.com | bota.lb |  bota.lb@alibaba-inc.com|id_rsa_gitlab.alibaba-inc.com.pub|
+github.com | robin2017 |  robin.seu@foxmail.com|id_rsa.github.com.pub	|
+github.qq.com | wangy202012 |  1143027179@qq.com|id_rsa.github.qq.com.pub|
+gitlab.alibaba-inc.com | bota.lb |  bota.lb@alibaba-inc.com|id_rsa.gitlab.alibaba-inc.com.pub|
 
  ![pic](https://robin2017.github.io/frontend-notes/images/rsa-all.jpg)
 
