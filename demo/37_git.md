@@ -12,4 +12,7 @@ order: 37
 ```
 ssh-keygen -t rsa -C "1143017179@qq.com"
 ```
-![pic](../images/rsa.png)
+![pic](/images/rsa.png)
+
+#### 2、绑定到新的github账号
+![pic](/images/ssh.png)
