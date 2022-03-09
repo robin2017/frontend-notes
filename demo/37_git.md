@@ -40,10 +40,19 @@ git clone git@qq:wangy202012/react-components.git
 ![pic](https://robin2017.github.io/frontend-notes/images/author.png)
 
 #### 6、修改工程配置
+查看配置
+```
+git config --local --list      
+git config --global --list
+```
+
+修改配置
+
 ```
 git config --local user.name "wangy202012"      
 git config --local user.email "1143027179@qq.com"
 ```
+
 ![pic](https://robin2017.github.io/frontend-notes/images/config.png)
 
 ## 最佳实践
