@@ -35,9 +35,11 @@ git clone git@github.com:wangy202012/react-components.git
 git clone git@qq:wangy202012/react-components.git
 
 ```
-![pic](https://robin2017.github.io/frontend-notes/images/gitclone.png)
-![pic](https://robin2017.github.io/frontend-notes/images/gitpush.png)
-![pic](https://robin2017.github.io/frontend-notes/images/author.png)
+
+![pic](https://robin2017.github.io/frontend-notes/images/gitclone.png)  
+![pic](https://robin2017.github.io/frontend-notes/images/gitpush.png)  
+![pic](https://robin2017.github.io/frontend-notes/images/author.png)  
+
 
 #### 6、修改工程配置
 查看配置
@@ -55,6 +57,7 @@ git config --local user.email "1143027179@qq.com"
 
 ![pic](https://robin2017.github.io/frontend-notes/images/config.png)
 
+
 ## 最佳实践
 + 使用git协议，不要用https
 + 仅github的wangy202012账号需要修改git路径，其他都不用
@@ -70,6 +73,7 @@ github.qq.com | wangy202012 |  1143027179@qq.com|id_rsa.github.qq.com.pub|
 gitlab.alibaba-inc.com | bota.lb |  bota.lb@alibaba-inc.com|id_rsa.gitlab.alibaba-inc.com.pub|
 
  ![pic](https://robin2017.github.io/frontend-notes/images/rsa-all.jpg)
+ 
 
 ```
 Host github.com
