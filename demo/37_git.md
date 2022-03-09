@@ -50,6 +50,7 @@ git config --local user.email "1143027179@qq.com"
 + 使用git协议，不要用https
 + 仅github的wangy202012账号需要修改git路径，其他都不用
 + 生成key时，密码跳过！！
++ gitpage优先使用gitee，因为网速快
 
 
 
