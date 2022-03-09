@@ -70,7 +70,7 @@ git config --local user.email "1143027179@qq.com"
 -|-|-|-
 github.com | robin2017 |  robin.seu@foxmail.com|id_rsa.github.com.pub	|
 github.qq.com | wangy202012 |  1143027179@qq.com|id_rsa.github.qq.com.pub|
-gitee.com|wangy202012 | robin.seu@foxmail.com|id_rsa.gitee.com|
+gitee.com|wangy202012 |  1143027179@qq.com|id_rsa.gitee.com.pub|
 gitlab.alibaba-inc.com | bota.lb |  bota.lb@alibaba-inc.com|id_rsa.gitlab.alibaba-inc.com.pub|
 
 
