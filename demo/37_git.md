@@ -102,6 +102,12 @@ git clone git@github.qq.com:wangy202012/react-components.git
 git config --local user.name "wangy202012"      
 git config --local user.email "1143027179@qq.com"
 ```
+gitee的新账号项目配置
+```
+// 本地用户名配置
+git config --local user.name "wangy202012"      
+git config --local user.email "robin.seu@foxmail.com"
+```
 
 
 ## 常见问题
