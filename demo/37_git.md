@@ -1,5 +1,5 @@
 ---
-title: 37、github多账号
+title: 37、github多账号&多仓库
 order: 37
 ---
 > 两个账号：qq邮箱和fox邮箱，密码都是c2ASD
@@ -108,8 +108,20 @@ gitee的新账号项目配置
 git config --local user.name "wangy202012"      
 git config --local user.email "robin.seu@foxmail.com"
 ```
+## 推送多仓库
+> 注意github主分支main，gitee主分支master，现统一为master
+https://zhuanlan.zhihu.com/p/141941373
+#### 1. 查看远程仓库
+`git remote -v`
 
+#### 2. 添加两个仓库
+```
+git remote add origin 你的Github仓库地址
+git remote set-url --add origin 你的码云地址
+```
+一个fetch，两个push
 
+![pic](https://robin2017.github.io/frontend-notes/images/git.jpg)
 ## 常见问题
 #### 1、403
 配置config即可
