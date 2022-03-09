@@ -1,5 +1,5 @@
 ---
-title: 37、gitpages
+title: 38、gitpages
 order: 38
 ---
 > 目前支持pages的有githubPages/giteePages
