@@ -110,6 +110,7 @@ git config --local user.email "robin.seu@foxmail.com"
 ```
 ## 推送多仓库
 > 注意github主分支main，gitee主分支master，现统一为master
+> 
 https://zhuanlan.zhihu.com/p/141941373
 #### 1. 查看远程仓库
 `git remote -v`
@@ -119,7 +120,9 @@ https://zhuanlan.zhihu.com/p/141941373
 git remote add origin 你的Github仓库地址
 git remote set-url --add origin 你的码云地址
 ```
-一个fetch，两个push
+#### 3、fetch/push
++ 一个fetch，两个push
++ 其中fetch为gitee(因为网络稳定)
 
 ![pic](https://robin2017.github.io/frontend-notes/images/git.jpg)
 ## 常见问题
