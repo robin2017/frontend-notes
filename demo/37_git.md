@@ -3,7 +3,7 @@ title: 37、github多账号&多仓库
 order: 37
 ---
 > 两个账号：qq邮箱和fox邮箱，密码都是c2ASD
-robin2017/wangy
+robin2017/wangy2020
 ## 参考资料
 [如何在本地管理和切换多个 github 账号？](https://juejin.cn/post/6844903831000596488)   
 
