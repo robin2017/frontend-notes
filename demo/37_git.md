@@ -117,8 +117,8 @@ https://zhuanlan.zhihu.com/p/141941373
 
 #### 2. 添加两个仓库
 ```
-git remote add origin 你的Github仓库地址
-git remote set-url --add origin 你的码云地址
+git remote add origin 你的码云地址
+git remote set-url --add origin 你的Github仓库地址(github.qq.com)
 ```
 #### 3、fetch/push
 + 一个fetch，两个push
