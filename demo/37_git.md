@@ -79,8 +79,9 @@ Host github.com
   HostName github.com
   User robin2017
   IdentityFile ~/.ssh/id_rsa.github.com
+# hostName必须为真实host
 Host github.qq.com
-  HostName github.qq.com
+  HostName github.com
   User wangy202012
   IdentityFile ~/.ssh/id_rsa.github.qq.com
 Host gitee.com
@@ -93,12 +94,11 @@ Host gitlab.alibaba-inc.com
   IdentityFile ~/.ssh/id_rsa.gitlab.alibaba-inc.com
 ```
 
-个人项目git配置
+github的新账号项目配置
 ```
-// github.com配置
-git config --local user.name "robin2017"      
-git config --local user.email "robin.seu@foxmail.com"
-// github.qq.com配置
+// 域名替换
+git clone git@github.qq.com:wangy202012/react-components.git
+// 本地用户名配置
 git config --local user.name "wangy202012"      
 git config --local user.email "1143027179@qq.com"
 ```
