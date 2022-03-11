@@ -1,4 +1,9 @@
-.Layout--fixNav--2F-f-kQ{
+// .Layout--fixNav--2F-f-kQ{
+//     height:calc(100% - 70px);
+//     overflow: auto;
+// }
+
+#root>div>ul{
     height:calc(100% - 70px);
     overflow: auto;
 }
