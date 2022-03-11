@@ -13,3 +13,26 @@ react也用jest作为测试框架container
 ## 2、常用测试框架Jest
 > 注意jest.config.js文件配置，可以删掉  
 ![图片](https://robin2017.github.io/frontend-notes/images/jest.jpg)
+
+## 3、jest&debugger
+https://blog.csdn.net/anonym/article/details/78511186
++ 添加如下调试任务
+```
+        {
+            "type": "node",
+            "request": "launch",
+            "protocol": "inspector",
+            "name": "Jest Debug",
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest",
+            "stopOnEntry": false,
+            "args": ["--runInBand", "--env=jsdom", "${fileBasename}"],
+            "runtimeArgs": [
+                "--inspect-brk"
+             ],
+             "cwd": "${workspaceRoot}",
+             "sourceMaps": true,
+             "console": "integratedTerminal"
+        }
+```
++ 在xx.test.js中添加断点
++ 执行debugger，当前页必须为xx.test.js
