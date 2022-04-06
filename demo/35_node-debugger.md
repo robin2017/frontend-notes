@@ -16,7 +16,7 @@ order: 35
 ![图片](https://robin2017.github.io/frontend-notes/images/debugger-error.jpg)
 ![图片](https://robin2017.github.io/frontend-notes/images/63.png)
 
-## debugger配置
+## 3、debugger配置
 ```
 {
     "version": "0.2.0",
@@ -34,3 +34,8 @@ order: 35
     ]
 }
 ```
+
+## 4、测试用例debugger(以linglong-top-filecenter为例)
+![图 1](../images/d3bca25722e1885f11263956dd21048511e274fc73329323481f159cc65c9708.png)  
+![图 2](../images/8366aa32d57abe553de86b2fa283a8b515896bb715355e57eab12b27487b4e2c.png)  
+![图 5](../images/9217d19b571fc837d8978ce8baf8d2ee56d9c666e1fe3f93303cbc6a13af1571.png)  
