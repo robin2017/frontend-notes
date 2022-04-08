@@ -12,6 +12,7 @@ order: 41
   - [6、常用命令](#6常用命令)
 - [二、编辑锁实现](#二编辑锁实现)
   - [1、客户端](#1客户端)
+  - [2、服务端](#2服务端)
 - [附录](#附录)
   - [1、转ms的工具:ms](#1转ms的工具ms)
 ## 一、基础知识
@@ -67,9 +68,29 @@ order: 41
 
 ## 二、编辑锁实现
 ### 1、客户端
++ 获取到锁
+  + 每隔30s发送一次post请求(带着页面id)，然后设置锁状态
++ 没获取到锁
+  + 部分功能不可用
+  + 不用轮训发送请求
++ 用户关闭浏览器
+  + 其他用户30s-1min可以获取到锁
+```
+const acquireLock = (options) => {
+  console.log('1、从服务端获取锁');
+  console.log('2、setLockState，并发送事件');
+  // settimeout第三个参数为第一个函数参数
+  setTimeout(acquireLock, options.time, options);
+};
 
-
-
+acquireLock({ time: 3000 });
+```
+### 2、服务端
++ 看app_appId_owner是否在
+  + 不存在，则直接获取锁，set app_appId_owner userId
+  + 存在，则判断哪个用户占用
+    + 如果是当前用户，则续命1分钟，expire app_appId_owner 60
+    + 如果不是，则返回错误
 
 
 ## 附录
