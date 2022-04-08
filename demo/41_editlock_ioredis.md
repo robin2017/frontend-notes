@@ -2,7 +2,19 @@
 title: 41、编辑锁-redis实现
 order: 41
 ---
-
+- [一、基础知识](#一基础知识)
+  - [1、开发服务器可以配置https](#1开发服务器可以配置https)
+  - [2、redis  vs mysql](#2redis--vs-mysql)
+  - [3、ioredis资料](#3ioredis资料)
+  - [4、redis安装使用](#4redis安装使用)
+        - [客户端界面（AnotherRedisDesktopManager）](#客户端界面anotherredisdesktopmanager)
+  - [5、redis学习](#5redis学习)
+  - [6、常用命令](#6常用命令)
+- [二、编辑锁实现](#二编辑锁实现)
+  - [1、客户端](#1客户端)
+- [附录](#附录)
+  - [1、转ms的工具:ms](#1转ms的工具ms)
+## 一、基础知识
 ### 1、开发服务器可以配置https
 ![图 1](../images/59450f5d5be5ee67b5b80b39eb602a72f0e176c401063147f82f3f83fc97f5d7.png)  
 
@@ -43,3 +55,23 @@ order: 41
 [redis入门](https://juejin.cn/post/6844903639765483533)  
 
 ![图 7](../images/100ca99e6e15f6ea6bc8d3bff8ccaaa33a17988966fe4128f4ceac0d9b871f31.png)  
+
+### 6、常用命令
+[文档](https://juejin.cn/post/6844903462279331853)  
++ setnx：设置成功返回1，失败返回0（如果已经存在则setnx会失败）
+
+![图 8](../images/fa365895aae972e52590118ef8d9fc6b021cc7128278e8c9f278aaf379b9e71d.png)  
+
++ exists / expire ：是否存在/设置超期时间
+![图 9](../images/0b684c24686c8302f8a0ff1399a74abd00f75f12897339de0fd133ca68c7a5fb.png)  
+
+## 二、编辑锁实现
+### 1、客户端
+
+
+
+
+
+## 附录
+### 1、转ms的工具:ms
+![图 10](../images/319e46cb2d2aecd148790a1998babb722a6b313798877ae0752d8914a77fe40f.png)  
