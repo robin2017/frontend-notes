@@ -1,5 +1,5 @@
 ---
-title: $$Debugger技巧-洋葱模型&插件&use-table $$
+title: $$Debugger技巧-洋葱模型$$
 order: 5002
 ---
 - [问题：query(params)查询后，通过getParams获取params为空](#问题queryparams查询后通过getparams获取params为空)
@@ -11,11 +11,11 @@ order: 5002
 
 ### 基本原理
 调用query时，执行:use-table/src/middlewares/render.ts
-```js
+```
 store.paramMap.set(params);
 ```
 调用getParams，执行:use-adapt-plugin-src/index.ts
-```js
+```
 getParams: () => {
   return adaptParams(ctx.store.paramMap.get(), map);
 }
@@ -24,7 +24,7 @@ getParams: () => {
 
 ### middlewares数组
 洋葱模型核心代码:use-query-display/src/compose.ts#onionCompose
-```js
+```
 export const onionCompose: IComposer['onionCompose'] = (middlewares) => (context, next) => {
   let index = -1;
   return dispatch(0);
@@ -53,7 +53,7 @@ export const onionCompose: IComposer['onionCompose'] = (middlewares) => (context
 
 + 代码为:use-table/src/middlewares/fetch.ts
 只有请求返回正确，调用了next，才会执行11个中间件的返回流程
-```js
+```
 const fetchMiddleware: Middleware = (ctx, next) => {
   const { [REQUEST_SYMBOL]: request, params, [PAYLOAD_SYMBOL]: payload, state, actions } = ctx;
   const { threshold } = request;
@@ -92,7 +92,7 @@ const fetchMiddleware: Middleware = (ctx, next) => {
 ```
 + renderMiddlleWare是第4个中间件，next前没有代码（入葱阶段不执行），next后有代码（出葱阶段执行）
    *因为返回异常，所以没有执行出葱阶段，所以没有设置store*
-```js
+```
 const renderMiddleware: Middleware = (ctx, next) => {
   return next().then(() => {
     const { response = {}, params, [REQUEST_SYMBOL]: request, meta, actions, store } = ctx;
