@@ -7,6 +7,9 @@ order: 20
 ```
 tail -1f xxx.log
 ```
+```
+tail -1f bianque-app.* | grep '/JoinActiveService/queryAlipayEmail'
+```
 
 ### 2、mac查看端口号
 ```
@@ -18,5 +21,5 @@ lsof: list open files
 > 可以参看多个日志，然后通过grep过滤
 [grep使用](https://juejin.cn/post/7053664079042314277)
 ```
-cat /bianque-app.* | grep '/JoinActiveService/queryAlipayEmail'
+cat bianque-app.* | grep '/JoinActiveService/queryAlipayEmail'
 ```
