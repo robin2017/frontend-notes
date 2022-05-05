@@ -13,3 +13,10 @@ tail -1f xxx.log
 lsof -i:12808
 ```
 lsof: list open files
+
+### 3、过滤历史日志
+> 可以参看多个日志，然后通过grep过滤
+[grep使用](https://juejin.cn/post/7053664079042314277)
+```
+cat /bianque-app.* | grep '/JoinActiveService/queryAlipayEmail'
+```
