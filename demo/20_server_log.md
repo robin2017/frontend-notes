@@ -23,3 +23,6 @@ lsof: list open files
 ```
 cat bianque-app.* | grep '/JoinActiveService/queryAlipayEmail'
 ```
+### 4、midway默认路径
+路径：/home/admin/logs/import-admin-config
+文件:midway-web.log 
