@@ -26,3 +26,6 @@ cat bianque-app.* | grep '/JoinActiveService/queryAlipayEmail'
 ### 4、midway默认路径
 路径：/home/admin/logs/import-admin-config
 文件:midway-web.log 
+
+### 5、本地日志
+![图 1](../images/120498b444a9406457dd603f174b51f8fa54d9ff0a5798eb17166188b505656c.png)  
